@@ -71,6 +71,10 @@ Mostrar los pacientes menores de edad que en sus consultas se encuentren las enf
 
 1. Documentar la solución en Readme de Git.
 
+### SOLUCIÓN PARCIAL 
+
+
+
 ## Bono
 
 Si después de realizado el parcial, de forma INDIVIDUAL encuentra defectos menores (que impliquen a lo sumo cambiar 5 líneas de código), y que al corregirlos permiten que los puntos 2 o 3 funcionen:
