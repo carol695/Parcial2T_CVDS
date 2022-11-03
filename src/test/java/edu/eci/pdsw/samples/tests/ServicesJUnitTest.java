@@ -72,12 +72,15 @@ public class ServicesJUnitTest {
     }
 
     @Test
-    public void pruebaCeroTest() throws SQLException, ExcepcionServiciosSuscripciones, PersistenceException {
+    public void DadoPacientesConID() throws SQLException, ExcepcionServiciosSuscripciones, PersistenceException {
         //Insertar datos en la base de datos de pruebas, de acuerdo con la clase
         //de equivalencia correspondiente
+
+        //arrange
         Connection conn=getConnection();
         Statement stmt=conn.createStatement();
 
+        //act
         stmt.execute("INSERT INTO `PACIENTES` (`id`, `tipo_id`, `nombre`, `fecha_nacimiento`) VALUES (1000,'TI','Carlos','2010-07-10')");
         stmt.execute("INSERT INTO `PACIENTES` (`id`, `tipo_id`, `nombre`, `fecha_nacimiento`) VALUES (1001,'TI','Esteban','2010-07-10')");
         stmt.execute("INSERT INTO `PACIENTES` (`id`, `tipo_id`, `nombre`, `fecha_nacimiento`) VALUES (1002,'CC','Ivan','1995-07-10')");
@@ -89,28 +92,34 @@ public class ServicesJUnitTest {
         conn.close();
 
         //Realizar la operacion de la logica y la prueba
-        System.out.println("Incio de Prueba");
-        System.out.println("Consultar Todos los Pacientes");
+//        System.out.println("Incio de Prueba");
+//        System.out.println("Consultar Todos los Pacientes");
         List<Paciente> pacientes = ServiciosPacientesFactory.getInstance().getServiciosPaciente().consultarPacientes();
-        for (Paciente paciente : pacientes){
-            System.out.println(paciente);
-        }
-        System.out.println("Consultar paciente por ID y TI");
-        System.out.println("Consultamos paciente con id = 1001, y Tipo de Identificacion = TI");
+//        for (Paciente paciente : pacientes){
+//            System.out.println(paciente);
+//        }
+        boolean ver = false;
+//        System.out.println("Consultar paciente por ID y TI");
+//        System.out.println("Consultamos paciente con id = 1001, y Tipo de Identificacion = TI");
         Paciente paciente = ServiciosPacientesFactory.getInstance().getServiciosPaciente().consultarPacientesPorId(1001, TipoIdentificacion.TI);
-        System.out.println(paciente);
-        System.out.println("Consultar Pacientes menores de edad con enfermedad contagiosa hepatitis o varicela");
+//        System.out.println(paciente);
+//        System.out.println("Consultar Pacientes menores de edad con enfermedad contagiosa hepatitis o varicela");
         List<Paciente> pacientesEnfermos = ServiciosPacientesFactory.getInstance().getServiciosPaciente().consultarMenoresConEnfermedadContagiosa();
         for (Paciente p : pacientesEnfermos){
-            System.out.println(p);
+            if(p.getId() == paciente.getId()){
+                ver = true;
+            }
         }
         System.out.println("Fin de la prueba");
-        //assert ...
+
+        //Assert
+        Assert.assertTrue(ver);
         List<Paciente> arrayPaciente = new ArrayList<>();
 
     }
 
-    // public void dadoEnConsultarPacientePorid_unId_Cuando_EsNegativo_Entonces_retornaError;
+
+
 
 
 }
