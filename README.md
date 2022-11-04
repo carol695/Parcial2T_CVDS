@@ -1,26 +1,12 @@
 ## Escuela Colombiana de Ingeniería
 
-### PDSW – Procesos de desarrollo de Software
+### CVDS
+### INTEGRANTE: 
+
+* Carol Tatiana Cely 
+
 ### Parcial Segundo Tercio
 
-
-**IMPORTANTE**
-
-* Deseable Trabajar en Linux (para evitar problemas con las instrucciones finales).
-* Se puede consultar en la Web: APIs/Documentación de lenguaje y frameworks (Primefaces, Guice, MyBatis, etc), y enunciados de los laboratorios (se pueden revisar los fuentes incluidos con los dichos enunciados).
-* No se permite: Usar memorias USB, acceder a redes sociales, clientes de correo, o sistemas de almacenamiento en la nube (Google Drive, DropBox, etc). El uso de éstos implicará anulación.
-* Clone el proyecto con GIT, NO lo descargue directamente.
-* NO modifique los indicado en consultaPaciente.xhtml.
-* El filtrado y ordenamiento de los datos DEBE realizarse en el motor de base de datos, a través del uso de SQL. Consultar todos los datos y filtrarlos en el servidor de aplicaciones -que es supremamente INEFICIENTE- se evaluará como INCORRECTO.
-
-
-Se le han dado los fuentes de un avance parcial de una plataforma de consultas de pacientes de una IPS en línea. En esta plataforma los médicos podrán registrar y buscar pacientes así como buscar y registrar las consultas.
-Adicionalmente, la secretaria de salud puede hacer búsquedas para control epidemiológico.
-
-Para el Sprint en curso, se han seleccionado las siguientes historias de usuario del Backlog de producto:
-
-Recuerde que en el formato XML no se puede utilizar '<' y '>', por ejemplo al realizar comparaciones, 
- utilice '&amp;lt;' o '&amp;gt;' respectivamente. 
 
 ## Historia de usuario #1
 
@@ -44,28 +30,6 @@ Recuerde que en el formato XML no se puede utilizar '<' y '>', por ejemplo al re
   >
   > **Criterio de aceptación:** El reporte NO debe requerir entrar parámetro alguno. Se considerán como enfermedades contagiosas: 'hepatitis' y 'varicela'. El reporte sólo debe contener el número y tipo de identificación  del paciente y la fecha de nacimiento, ordenados por edad de mayor a menor.
   -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-El modelo de base de datos y de clases asociados a la implementación parcial son los siguientes:
-
-![](./img/Diagram.png)
-
-![](./img/Model.png)
-
-A partir de la aplicación base suministrada, debe realizar lo siguiente:
-
-Dado un número y tipo de identificacion de un paciente, mostrar el paciente y las consultas que ha realizado esde paciente.
-
-Mostrar los pacientes menores de edad que en sus consultas se encuentren las enfermedades: hepatitis o varicela.
-
-
-1.  (20%) A partir de la especificación hecha en los métodos
-    *consultarPacientesPorId* y *consultarMenoresConEnfermedadContagiosa* de la fachada de
-    servicios (la parte lógica de la aplicación), implemente sólo una prueba (la que considere más importante para validar las especificaciones y los criterios de aceptación). Siga el esquema usado en ServicesJUnitTest para poblar la base de datos volátil y verificar el comportamiento de las operaciones de la lógica.
-
-2.  (40%) Implemente la historia de usuario #1, agregando todo lo que haga falta en la capa de presentación, lógica y de persistencia. La vista debe implementarse en consultaPaciente.xhtml.
-
-3.  (40%)Implemente la historia de usuario #2, agregando todo lo que haga falta en la capa de presentación, lógica y de persistencia. La vista debe implementarse en consultarMenoresEnfermedadContagiosa.xhtml.
-
 
 ## Entrega
 
