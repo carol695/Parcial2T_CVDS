@@ -113,7 +113,7 @@ Al momento de correr la clase
 
 ![image](https://user-images.githubusercontent.com/63822072/199847588-e8d94283-c783-4cf0-9615-30849b7dbc5b.png)
 
-EN LA PARTE DE FRONT- END 
+## EN LA PARTE DE FRONT- END 
 
 ### Resources
 
