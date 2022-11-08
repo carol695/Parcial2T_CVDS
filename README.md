@@ -4,6 +4,7 @@
 ### INTEGRANTE: 
 
 * Carol Tatiana Cely 
+* Julian Largo
 
 ### Parcial Segundo Tercio
 
